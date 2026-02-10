@@ -2,13 +2,13 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
 });
-
 
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${jakarta.variable} antialiased`} suppressContentEditableWarning>
         <Navbar />
         {children}
-        
+        <Footer />
       </body>
     </html>
   );
