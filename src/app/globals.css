@@ -9,6 +9,7 @@
 
   /* Font Family - must use --font-family-* prefix */
   --font-family-inter: "Inter", sans-serif;
+  --font-family-jakarta: var(--font-plus-jakarta), sans-serif;
 
 
 }
