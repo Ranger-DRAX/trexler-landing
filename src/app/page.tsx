@@ -359,6 +359,156 @@ export default function Home() {
               </div>
             </section>
 
+      {/* Industries Section */}
+      <section className="py-25 px-18 bg-trexler-dark rounded-t-[70px] font-family-inter">
+        <div className="container  mx-auto max-w-9xl">
+          <div className="mb-4">
+            <span className="text-trexler-yellow text-sm font-semibold tracking-wider uppercase">3.INDUSTRIES</span>
+            
+          </div>
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Industries We Serve.
+          </h2>
+
+          <p className="text-xl text-gray-300 mb-16 max-w-3xl">
+            Comprehensive technology solutions tailored <br></br> for modern enterprises.
+          </p>
+
+          {/* Industries Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            {/* Healthcare */}
+              <div
+                className="
+                  group rounded-3xl overflow-hidden
+                  border border-gray-200 bg-white
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  hover:bg-trexler-yellow hover:border-trexler-yellow
+                "
+              >
+                {/* Image area (no bg-white, so it inherits yellow on hover) */}
+                <div className="relative aspect-square p-6">
+                  <div className="relative h-full w-full overflow-hidden
+                  rounded-2xl border border-white bg-white">
+                  <Image
+                    src="/assets/industry-healthcare.png"
+                    alt="Healthcare"
+                    fill
+                    className="object-contain p-8"
+                  />
+                </div>
+                </div>
+
+                {/* Content area */}
+                <div className="p-4">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Healthcare
+                  </h3>
+                  <p className="text-gray-700">
+                    Streamlining operations and improving patient outcomes.
+                  </p>
+                </div>
+              </div>
+
+
+
+
+            {/* Financial Services - Featured */}
+              <div
+                className="
+                  group rounded-3xl overflow-hidden
+                  border border-gray-200 bg-white
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  hover:bg-trexler-yellow hover:border-trexler-yellow
+                "
+              >  
+              <div className="relative aspect-square p-6">
+                <div className="relative h-full w-full overflow-hidden
+                 rounded-2xl border border-white bg-white">
+                <Image
+                  src="/assets/industry-financial.png"
+                  alt="Financial Services"
+                  fill
+                  className="object-contain p-8"
+                />
+              </div>
+              </div>
+              <div className="p-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Financial Services
+                </h3>
+                <p className="text-gray-800">
+                Enhancing security and transaction speed.</p>
+              </div>
+            </div>
+
+
+            {/* Enterprise & Tech */}
+              <div
+                className="
+                  group rounded-3xl overflow-hidden
+                  border border-gray-200 bg-white
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  hover:bg-trexler-yellow hover:border-trexler-yellow
+                "
+              >               
+              <div className="aspect-square relative p-6">
+                <div className="relative h-full w-full overflow-hidden
+                 rounded-2xl border border-white bg-white">
+                  <Image
+                    src="/assets/industry-enterprise.png"
+                    alt="Enterprise & Tech"
+                    fill
+                    className="object-contain p-8"
+                  />
+                </div>
+              </div>
+
+              <div className="p-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Enterprise & Tech
+                </h3>
+                <p className="text-gray-600">
+                  Scalable systems for large organizations.</p>
+              </div>
+            </div>
+
+            {/* Non-Profit */}
+              <div
+                className="
+                  group rounded-3xl overflow-hidden
+                  border border-gray-200 bg-white
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  hover:bg-trexler-yellow hover:border-trexler-yellow
+                "
+              >
+               <div className="aspect-square relative p-6">
+                <div className="relative h-full w-full overflow-hidden
+                 rounded-2xl border border-white bg-white">
+                <Image
+                  src="/assets/industry-nonprofit.png"
+                  alt="Non-Profit"
+                  fill
+                  className="object-contain p-4"
+                />
+              </div>
+              </div>
+              <div className="p-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Non-Profit
+                </h3>
+                <p className="text-gray-600">
+                  Technology to amplify social impact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
   );
