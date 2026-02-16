@@ -1,5 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Pagination} from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 
 export default function Home() {
   return (
@@ -19,7 +27,8 @@ export default function Home() {
           
           
           <div className="container relative z-10 mx-auto max-w-6xl text-center">
-            {/* Status Badge */}
+            {/* Status Badge */}      {/* Industries Section */}
+
             <div className="mb-8 flex justify-center">
               <div className="inline-flex items-center gap-2 rounded-full border  border-gray-400 px-2 py-2 backdrop-blur-sm">
                 <span className="h-2 w-2 rounded-full bg-green-500" />
@@ -359,155 +368,177 @@ export default function Home() {
               </div>
             </section>
 
-      {/* Industries Section */}
-      <section className="py-25 px-18 bg-trexler-dark rounded-t-[70px] font-family-inter">
-        <div className="container  mx-auto max-w-9xl">
-          <div className="mb-4">
-            <span className="text-trexler-yellow text-sm font-semibold tracking-wider uppercase">3.INDUSTRIES</span>
-            
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Industries We Serve.
-          </h2>
-
-          <p className="text-xl text-gray-300 mb-16 max-w-3xl">
-            Comprehensive technology solutions tailored <br></br> for modern enterprises.
-          </p>
-
-          {/* Industries Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
-            {/* Healthcare */}
-              <div
-                className="
-                  group rounded-3xl overflow-hidden
-                  border border-gray-200 bg-white
-                  transition-all duration-300
-                  hover:-translate-y-2
-                  hover:bg-trexler-yellow hover:border-trexler-yellow
-                "
-              >
-                {/* Image area (no bg-white, so it inherits yellow on hover) */}
-                <div className="relative aspect-square p-6">
-                  <div className="relative h-full w-full overflow-hidden
-                  rounded-2xl border border-white bg-white">
-                  <Image
-                    src="/assets/industry-healthcare.png"
-                    alt="Healthcare"
-                    fill
-                    className="object-contain p-8"
-                  />
-                </div>
-                </div>
-
-                {/* Content area */}
-                <div className="p-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Healthcare
-                  </h3>
-                  <p className="text-gray-700">
-                    Streamlining operations and improving patient outcomes.
-                  </p>
-                </div>
+          {/* Industries Section */}
+          <section className="py-16 md:py-24 px-6 md:px-12 bg-trexler-dark rounded-t-[70px] font-family-inter">
+              <div className="container mx-auto max-w-7xl">
+              <div className="mb-4">
+                <span className="text-trexler-yellow text-sm font-semibold tracking-wider uppercase">
+                  3.INDUSTRIES
+                </span>
               </div>
 
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+                Industries We Serve.
+              </h2>
 
+              <p className="text-xl text-gray-300 mb-10 sm:mb-16 max-w-3xl">
+                Comprehensive technology solutions tailored <br /> for modern enterprises.
+              </p>
 
+              {/* MOBILE: Swiper */}
+              <div className="sm:hidden">
+                <Swiper
+                  modules={[Pagination]}
+                  slidesPerView={1}
+                  spaceBetween={16}
+                  pagination={{ clickable: true }}
+                  className="industries-swiper"
+                >
+                  {/* Healthcare */}
+                  <SwiperSlide>
+                    <div className="group rounded-3xl overflow-hidden 
+                    border border-gray-200 bg-white">
+                      <div className="relative aspect-square p-2">
+                        <div className="relative h-full w-full overflow-hidden 
+                        rounded-2xl border border-white bg-white">
+                          <Image
+                          src="/assets/industry-healthcare.png" 
+                          alt="Healthcare" 
+                          fill 
+                          className="object-contain p-2" 
+                          />
+                        </div>
+                      </div>
+                      <div className="p-2">
+                        <h3 className="text-2xl font-bold text-gray-900 ">
+                          Healthcare  
+                        </h3>
+                        <p  className="text-gray-700">
+                          Streamlining operations and improving patient outcomes.
+                          </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
 
-            {/* Financial Services - Featured */}
-              <div
-                className="
-                  group rounded-3xl overflow-hidden
-                  border border-gray-200 bg-white
-                  transition-all duration-300
-                  hover:-translate-y-2
-                  hover:bg-trexler-yellow hover:border-trexler-yellow
-                "
-              >  
-              <div className="relative aspect-square p-6">
-                <div className="relative h-full w-full overflow-hidden
-                 rounded-2xl border border-white bg-white">
-                <Image
-                  src="/assets/industry-financial.png"
-                  alt="Financial Services"
-                  fill
-                  className="object-contain p-8"
-                />
+                  {/* Financial Services */}
+                  <SwiperSlide>
+                    <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white ">
+                      <div className="relative aspect-square p-6">
+                        <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                          <Image 
+                          src="/assets/industry-financial.png"
+                          alt="Financial Services" 
+                          fill
+                          className="object-contain p-4" />
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          Financial Services
+                        </h3>
+                        <p className="text-gray-700">
+                          Enhancing security and transaction speed.
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  {/* Enterprise & Tech */}
+                  <SwiperSlide>
+                    <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white ">
+                      <div className="relative aspect-square p-6">
+                        <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                          <Image src="/assets/industry-enterprise.png" 
+                          alt="Enterprise & Tech" 
+                          fill 
+                          className="object-contain p-4" />
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise & Tech</h3>
+                        <p className="text-gray-700">Scalable systems for large organizations.</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  {/* Non-Profit */}
+                  <SwiperSlide>
+                    <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white ">
+                      <div className="relative aspect-square p-6">
+                        <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                          <Image 
+                          src="/assets/industry-nonprofit.png" 
+                          alt="Non-Profit" 
+                          fill 
+                          className="object-contain p-4" />
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Non-Profit</h3>
+                        <p className="text-gray-700">Technology to amplify social impact.</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
-              </div>
-              <div className="p-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Financial Services
-                </h3>
-                <p className="text-gray-800">
-                Enhancing security and transaction speed.</p>
+
+              {/* DESKTOP/TABLET: Grid */}
+              <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Healthcare */}
+                <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:bg-trexler-yellow hover:border-trexler-yellow">
+                  <div className="relative aspect-square p-6">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                      <Image src="/assets/industry-healthcare.png" alt="Healthcare" fill className="object-contain p-8" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Healthcare</h3>
+                    <p className="text-gray-700">Streamlining operations and improving patient outcomes.</p>
+                  </div>
+                </div>
+
+                {/* Financial Services */}
+                <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:bg-trexler-yellow hover:border-trexler-yellow">
+                  <div className="relative aspect-square p-6">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                      <Image src="/assets/industry-financial.png" alt="Financial Services" fill className="object-contain p-8" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Financial Services</h3>
+                    <p className="text-gray-700">Enhancing security and transaction speed.</p>
+                  </div>
+                </div>
+
+                {/* Enterprise & Tech */}
+                <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:bg-trexler-yellow hover:border-trexler-yellow">
+                  <div className="relative aspect-square p-6">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                      <Image src="/assets/industry-enterprise.png" alt="Enterprise & Tech" fill className="object-contain p-8" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise & Tech</h3>
+                    <p className="text-gray-700">Scalable systems for large organizations.</p>
+                  </div>
+                </div>
+
+                {/* Non-Profit */}
+                <div className="group rounded-3xl overflow-hidden border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:bg-trexler-yellow hover:border-trexler-yellow">
+                  <div className="relative aspect-square p-6">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white bg-white">
+                      <Image src="/assets/industry-nonprofit.png" alt="Non-Profit" fill className="object-contain p-4" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Non-Profit</h3>
+                    <p className="text-gray-700">Technology to amplify social impact.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-
-            {/* Enterprise & Tech */}
-              <div
-                className="
-                  group rounded-3xl overflow-hidden
-                  border border-gray-200 bg-white
-                  transition-all duration-300
-                  hover:-translate-y-2
-                  hover:bg-trexler-yellow hover:border-trexler-yellow
-                "
-              >               
-              <div className="aspect-square relative p-6">
-                <div className="relative h-full w-full overflow-hidden
-                 rounded-2xl border border-white bg-white">
-                  <Image
-                    src="/assets/industry-enterprise.png"
-                    alt="Enterprise & Tech"
-                    fill
-                    className="object-contain p-8"
-                  />
-                </div>
-              </div>
-
-              <div className="p-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Enterprise & Tech
-                </h3>
-                <p className="text-gray-600">
-                  Scalable systems for large organizations.</p>
-              </div>
-            </div>
-
-            {/* Non-Profit */}
-              <div
-                className="
-                  group rounded-3xl overflow-hidden
-                  border border-gray-200 bg-white
-                  transition-all duration-300
-                  hover:-translate-y-2
-                  hover:bg-trexler-yellow hover:border-trexler-yellow
-                "
-              >
-               <div className="aspect-square relative p-6">
-                <div className="relative h-full w-full overflow-hidden
-                 rounded-2xl border border-white bg-white">
-                <Image
-                  src="/assets/industry-nonprofit.png"
-                  alt="Non-Profit"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
-              </div>
-              <div className="p-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Non-Profit
-                </h3>
-                <p className="text-gray-600">
-                  Technology to amplify social impact.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
     </main>
 
