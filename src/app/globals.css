@@ -41,3 +41,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Swiper dot styling */
+.industries-swiper .swiper-pagination {
+  position: static;
+  margin-top: 10px;
+}
+.industries-swiper .swiper-pagination-bullet {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.28);
+}
+.industries-swiper .swiper-pagination-bullet-active {
+  background: #f5c542;
+}
