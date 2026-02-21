@@ -24,8 +24,10 @@ const projects: Project[] = [
       tools: ["Figma", "Next.js", "Tailwind", "CMS"],
 
       context: [
-        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply.",
-        'We were tasked with building a unified "Digital Nerve Center"—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike.',
+        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply."
+      ],
+      context_2:[
+        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
       ],
       deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
       impact: [
@@ -76,8 +78,9 @@ const projects: Project[] = [
       tools: ["Figma", "Next.js", "Tailwind", "CMS"],
 
       context: [
-        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply.",
-        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike.",
+        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply."      ],
+      context_2:[
+        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
       ],
       deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
       impact: [

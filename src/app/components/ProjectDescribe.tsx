@@ -10,6 +10,7 @@ export type DescribeData = {
   tools: string[]; // ["Figma", "Next.js", "Tailwind", "CMS"]    
 
   context: string[];
+  context_2: string[]; // optional second context section
   deliverables: string[];
   impact: { label: string; value: string }[];
 
@@ -39,7 +40,8 @@ function Pill({ children }: { children: React.ReactNode }) {
 
 function ToolChip({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-semibold text-black/70">
+    <span className="inline-flex items-center rounded-full border
+     border-[#c7c9cf] bg-white px-3 py-1 text-xs sm:text-sm font-medium  text-[#354c76] hover:bg-gray-50">
       {children}
     </span>
   );
@@ -98,28 +100,30 @@ function Stars({ rating }: { rating: number }) {
 
 export default function ProjectDescribe({ data }: { data: DescribeData }) {
   return (
-    <section className="mx-auto w-full max-w-[1200px] font-family-inter">
+    <section className="mx-auto w-full max-w-[1500px] font-family-inter">
       <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-[50px] lg:min-h-[1192px]">
         {/* Left Number Block */}
         <div className="shrink-0">
-          <div className="w-[120px] h-[140px] rounded-3xl bg-trexler-yellow flex items-start justify-start p-5 ">
-            <span className="text-5xl font-extrabold text-black">{data.number}</span>
+          <div className="w-[120px] h-[200px] rounded-3xl bg-trexler-yellow flex items-start justify-start p-5 ">
+            <span className="text-6xl font-extrabold text-black">{data.number}</span>
           </div>
         </div>
 
         {/* Right Content */}
         <div className="flex-1 w-full">
-          {/* Categories  with pill*/}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* Categories  with pill */}
+          <div className="flex flex-wrap items-center gap-3 text-trexler-dark">
             {data.categories?.[0] && 
-              <Pill>{data.categories[0]}</Pill>
+              <Pill>
+                {data.categories[0]}
+              </Pill>
             }
 
             {/* Remaining categories without pill */}
             {data.categories?.slice(1).map((cat, idx) => (
                 <span
                 key={`${cat}-${idx}`}
-                className="text-xs sm:text-sm font-medium text-black/70"
+                className="text-xs sm:text-sm font-medium text-trexler-dark"
                 >
                 {cat}
                 </span>
@@ -128,30 +132,30 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           </div>
 
           {/* Title */}
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-black">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-trexler-dark">
             {data.title}
           </h2>
 
           {/* Meta row */}
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-black/40">Client</p>
-              <p className="mt-2 font-semibold text-black/70">{data.client}</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Client</p>
+              <p className="mt-2 text-2xl font-base text-gray-600">{data.client}</p>
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-black/40">Services</p>
-              <p className="mt-2 font-semibold text-black/70">{data.services}</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Services</p>
+              <p className="mt-2 text-2xl font-base text-gray-600">{data.services}</p>
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-black/40">Timeline</p>
-              <p className="mt-2 font-semibold text-black/70">{data.timeline}</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Timeline</p>
+              <p className="mt-2 text-2xl font-base text-gray-600">{data.timeline}</p>
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-black/40">Tools</p>
-              <div className="mt-2 flex flex-wrap gap-2">
+              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Tools</p>
+              <div className="mt-2 flex flex-wrap gap-2 ">
                 {data.tools.map((t) => (
                   <ToolChip key={t}>{t}</ToolChip>
                 ))}
@@ -163,9 +167,14 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-8 h-px w-full bg-black/10" />
 
           {/* Context */}
-          <h3 className="mt-10 text-2xl font-extrabold text-black">The Context</h3>
-          <div className="mt-4 space-y-4 text-sm leading-6 text-black/60">
+          <h3 className="mt-10 text-3xl font-bold text-trexler-dark">The Context</h3>
+          <div className="mt-4 space-y-4 text-xl leading-6 text-black/60">
             {data.context.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+          <div className="mt-4 space-y-4 text-xl leading-6 text-trexler-dark">
+            {data.context_2.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>

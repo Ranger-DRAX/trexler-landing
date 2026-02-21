@@ -32,9 +32,9 @@ export default function ProjectsSlider({
   const thumbLeft = total <= 1 ? "0px" : `calc(${activeIndex} * (100% - ${THUMB_W}) / ${denom})`;
 
   return (
-    <section className="mx-auto w-full max-w-[1200px] flex flex-col items-center gap-8">
+    <section className="mx-auto w-full max-w-[1500px] flex flex-col items-center gap-8">
       {/* Slider Frame */}
-      <div className="w-full h-[420px] sm:h-[460px] lg:h-[505px]">
+      <div className="w-full  h-102 sm:h-116.25 ">
         <Swiper
           onSwiper={(s) => (swiperRef.current = s)}
           onSlideChange={(s) => {
@@ -44,14 +44,15 @@ export default function ProjectsSlider({
           slidesPerView={1}
           spaceBetween={32}
           grabCursor
-          className="h-full w-full"
+          className="h-full w-full "
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id} className="h-full">
               <div className="h-full w-full flex items-center justify-center">
                 {/* MOBILE: 1 big image */}
                 <div className="w-full flex items-center justify-center lg:hidden">
-                  <div className="relative overflow-hidden rounded-[24px] bg-white w-full max-w-[384px] h-[393.49px]">
+                  <div className="relative overflow-hidden rounded-[24px] bg-white 
+                  w-full max-w-[384px] h-[393.49px]">
                     <Image
                       src={project.shots[0].src}
                       alt={project.shots[0].alt ?? `Project ${project.id} screenshot 1`}
@@ -71,8 +72,7 @@ export default function ProjectsSlider({
                         relative overflow-hidden rounded-[24px] bg-white
                         w-full max-w-[384px]
                         h-[393.49px] lg:w-[384px]
-                        flex-1
-                      "
+                        flex-1"
                     >
                       <Image
                         src={shot.src}
@@ -97,7 +97,7 @@ export default function ProjectsSlider({
         </div>
 
         {/* Scrollbar track + thumb */}
-        <div className="relative h-[3px] flex-1 rounded-full bg-black/10 overflow-hidden">
+        <div className="relative h-[4px] flex-1 rounded-full bg-black/10 overflow-hidden">
           <div
             className="absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-trexler-yellow transition-[left] duration-300"
             style={{ width: THUMB_W, left: thumbLeft }}
