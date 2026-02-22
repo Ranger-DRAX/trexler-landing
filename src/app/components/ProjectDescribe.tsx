@@ -12,7 +12,7 @@ export type DescribeData = {
   context: string[];
   context_2: string[]; // optional second context section
   deliverables: string[];
-  impact: { label: string; value: string }[];
+  impact:  string[];
 
   challengeIntro: string;
   challengeBullets: string[];
@@ -49,17 +49,17 @@ function ToolChip({ children }: { children: React.ReactNode }) {
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-3 text-sm text-black/70">
-      <span className="mt-1 text-trexler-yellow">✓</span>
-      <span>{children}</span>
+    <li className="flex items-start gap-2 text-lg text-trexler-dark">
+      <span className=" text-orange-600 text-xl">✓</span>
+      <span className="text-base">{children}</span>
     </li>
   );
 }
 
 function UpItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-3 text-sm text-black/70">
-      <span className="mt-0.5 text-green-600">↑</span>
+    <li className="flex items-start gap-2 text-lg text-trexler-dark">
+      <span className="-mt-1 text-green-600 text-xl">↑</span>
       <span>{children}</span>
     </li>
   );
@@ -68,11 +68,18 @@ function UpItem({ children }: { children: React.ReactNode }) {
 function IconBox({ variant }: { variant: "challenge" | "solution" }) {
   const isChallenge = variant === "challenge";
   return (
-    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white border border-black/10">
+    <div className=" flex">
       {isChallenge ? (
-        <span className="text-trexler-yellow">◎</span>
+        <div className="relative h-10 w-10">
+          <span className="absolute inset-0 rounded-full border-4 border-trexler-yellow" />
+          <span className="absolute inset-2 rounded-full border-4 border-trexler-yellow" />
+          <span className="absolute inset-4 rounded-full border-4 border-trexler-yellow" />
+        </div>
+        
       ) : (
-        <span className="text-[#2d4b86]">✓</span>
+        <div className="grid h-10 w-10 place-items-center rounded-4xl bg-trexler-blue border-black/10">
+        <span className="text-white text-2xl">✓</span>
+        </div>
       )}
     </div>
   );
@@ -85,12 +92,12 @@ function Stars({ rating }: { rating: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          width="16"
-          height="16"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           className={i < full ? "text-orange-500" : "text-black/15"}
           fill="currentColor"
-        >
+>
           <path d="M12 17.27l5.18 3.04-1.64-5.81L20 9.24l-5.9-.5L12 3.25 9.9 8.74 4 9.24l4.46 5.26-1.64 5.81L12 17.27z" />
         </svg>
       ))}
@@ -164,7 +171,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           </div>
 
           {/* Divider */}
-          <div className="mt-8 h-px w-full bg-black/10" />
+          <div className="mt-8 h-px w-full bg-gray-300" />
 
           {/* Context */}
           <h3 className="mt-10 text-3xl font-bold text-trexler-dark">The Context</h3>
@@ -182,8 +189,8 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           {/* Deliverables + Impact */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
             <div>
-              <p className="text-base font-extrabold text-black">Deliverables</p>
-              <ul className="mt-4 space-y-3">
+              <p className="text-xl font-bold text-trexler-dark">Deliverables</p>
+              <ul className="mt-4 space-y-2 ">
                 {data.deliverables.map((d) => (
                   <CheckItem key={d}>{d}</CheckItem>
                 ))}
@@ -191,27 +198,25 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-base font-extrabold text-black">Impact</p>
-              <ul className="mt-4 space-y-3">
+              <p className="text-xl font-bold text-trexler-dark">Impact</p>
+              <ul className="mt-4 space-y-2">
                 {data.impact.map((m) => (
-                  <UpItem key={m.label}>
-                    <span className="font-semibold">{m.value}</span> {m.label}
-                  </UpItem>
+                  <UpItem key={m}>{m} </UpItem>
                 ))}
               </ul>
             </div>
           </div>
 
           {/* Divider */}
-          <div className="mt-10 h-px w-full bg-black/10" />
+          <div className="mt-10 h-px w-full bg-gray-300" />
 
           {/* Challenge */}
           <div className="mt-10 flex gap-6">
             <IconBox variant="challenge" />
             <div className="flex-1">
-              <h4 className="text-xl font-extrabold text-black">Challenge</h4>
-              <p className="mt-2 text-sm text-black/60">{data.challengeIntro}</p>
-              <ul className="mt-3 list-disc pl-5 space-y-2 text-sm text-black/60">
+              <h4 className="text-xl font-bold text-black">Challenge</h4>
+              <p className="mt-2 text-lg text-trexler-dark ">{data.challengeIntro}</p>
+              <ul className="mt-2 list-disc px-7 space-y-1 text-base text-trexler-dark">
                 {data.challengeBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -223,9 +228,9 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-10 flex gap-6">
             <IconBox variant="solution" />
             <div className="flex-1">
-              <h4 className="text-xl font-extrabold text-black">Solution</h4>
-              <p className="mt-2 text-sm text-black/60">{data.solutionIntro}</p>
-              <ul className="mt-3 list-disc pl-5 space-y-2 text-sm text-black/60">
+              <h4 className="text-xl font-bold text-black">Solution</h4>
+              <p className="mt-2 text-lg text-trexler-dark">{data.solutionIntro}</p>
+              <ul className="mt-2 list-disc px-7 space-y-1  text-base text-trexler-dark">
                 {data.solutionBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -245,7 +250,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
-              <span className="text-lg font-extrabold text-black">{data.testimonial.name}</span>
+              <span className="text-lg font-bold text-black ">{data.testimonial.name}</span>
               <span className="text-black/30">|</span>
               <span className="text-sm font-medium text-black/50">
                 {data.testimonial.role}, {data.testimonial.company}

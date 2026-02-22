@@ -30,11 +30,7 @@ const projects: Project[] = [
         "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
       ],
       deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
-      impact: [
-        { value: "45%", label: "Efficiency Gain" },
-        { value: "Real-time", label: "Monitoring" },
-      ],
-
+      impact: ["45% Efficiency Gain","Real-time Monitoring"],
       challengeIntro:
         "Need for accurate, real-time health tracking and personalized daily insights for company profile website.",
       challengeBullets: [
@@ -83,10 +79,7 @@ const projects: Project[] = [
         "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
       ],
       deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
-      impact: [
-        { value: "45%", label: "Efficiency Gain" },
-        { value: "Real-time", label: "Monitoring" },
-      ],
+      impact: ["45% Efficiency Gain","Real-time Monitoring"],
 
       challengeIntro:
         "Need for accurate, real-time health tracking and personalized daily insights for company profile website.",
