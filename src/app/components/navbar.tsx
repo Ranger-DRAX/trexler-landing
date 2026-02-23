@@ -20,17 +20,17 @@ export default function Navbar() {
   return (
   <header className="inset-x-0 top-0 z-50 w-full">
     {/* Mobile header : flat bar with logo + hamburger */}
-      <div className="md:hidden w-full bg-trexler-dark px-4 py-4">
+      <div className="md:hidden w-full bg-primary px-4 py-4">
         <div className="mx-auto flex max-w-screen-2xl items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/Trexler-Logo-Yellow.png"
+              src="/assets/Trexler-Logo.png"
               alt="Trexler Technology Systems"
               width={145}
               height={42}
               priority
-              className="h-7 w-auto"
+              className="h-10"
             />
           </Link>
           {/* Opens the full-screen mobile menu */}
@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-screen-2xl">
           <div
             className="relative flex w-full items-center justify-between
-            rounded-full border border-gray-800 bg-trexler-dark
+            rounded-full border border-gray-800 bg-primary
             px-3 py-2 shadow-lg backdrop-blur-lg 
             sm:px-4 sm:py-2.5
             md:px-10 md:py-4 
@@ -67,7 +67,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/assets/Trexler-Logo-Yellow.png"
+                src="/assets/Trexler-Logo.png"
                 alt="Trexler Technology Systems"
                 width={145}
                 height={40}
@@ -80,7 +80,7 @@ export default function Navbar() {
             <nav className="hidden md:flex items-center gap-2 sm:gap-2 md:gap-6 lg:gap-10">
               <Link
                 href="/#about"
-                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-trexler-yellow transition-colors duration-300"
+                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-accent transition-colors duration-300"
               >
                 <span className="hidden sm:inline">About Us</span>
                 <span className="sm:hidden">About</span>
@@ -88,14 +88,14 @@ export default function Navbar() {
 
               <Link
                 href="/capabilities"
-                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-trexler-yellow transition-colors duration-300"
+                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-accent transition-colors duration-300"
               >
                 Services
               </Link>
 
               <Link
                 href="/projects"
-                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-trexler-yellow transition-colors duration-300"
+                className="px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 lg:px-6 md:py-3 text-xs sm:text-sm font-medium text-white/90 rounded-full border-2 border-transparent hover:border-accent transition-colors duration-300"
               >
                 Projects
               </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
             {/* Desktop contact button */}
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center justify-center rounded-full bg-trexler-yellow px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2.5 text-xs sm:text-sm font-normal text-black shadow-sm transition hover:brightness-95"
+              className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2.5 text-xs sm:text-sm font-normal text-black shadow-sm transition hover:brightness-95"
             >
               <span className="hidden sm:inline">Contact Us</span>
               <span className="sm:hidden">Contact</span>
@@ -116,7 +116,7 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       {open && (
-        <div className="fixed inset-0 z-999 bg-trexler-dark">
+        <div className="fixed inset-0 z-999 bg-primary">
             <div className="relative flex h-full flex-col items-end px-2 py-5 gap-25">
               {/* Right-aligned column menu */}
               <button
@@ -143,7 +143,7 @@ export default function Navbar() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={`text-3xl font-sans transition ${
-                      item.label === "Home" ? "text-trexler-yellow" : "text-white"
+                      item.label === "Home" ? "text-accent" : "text-white"
                     }`}
                   >
                     {item.label}
