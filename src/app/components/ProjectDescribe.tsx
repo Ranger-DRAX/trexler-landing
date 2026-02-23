@@ -107,35 +107,38 @@ function Stars({ rating }: { rating: number }) {
 
 export default function ProjectDescribe({ data }: { data: DescribeData }) {
   return (
-    <section className="mx-auto w-full max-w-[1500px] font-family-inter">
-      <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-[50px] lg:min-h-[1192px]">
+    <section className="mx-auto w-full max-w-375 font-family-inter">
+      <div className="flex flex-row items-start gap-4 lg:gap-12.5 lg:min-h-298">
         {/* Left Number Block */}
         <div className="shrink-0">
-          <div className="w-[120px] h-[200px] rounded-3xl bg-trexler-yellow flex items-start justify-start p-5 ">
-            <span className="text-6xl font-extrabold text-black">{data.number}</span>
+          <div className="
+            flex flex-col items-center justify-start
+            w-14 h-20 p-3 gap-2 rounded-2xl
+            lg:w-30 lg:h-55 lg:p-4 lg:rounded-3xl
+            bg-[#F6C73A]
+          ">
+            <span className="text-3xl lg:text-6xl font-bold text-black leading-tight">
+              {data.number}
+            </span>
           </div>
         </div>
 
+
         {/* Right Content */}
         <div className="flex-1 w-full">
-          {/* Categories  with pill */}
+          {/* Categories with pill */}
           <div className="flex flex-wrap items-center gap-3 text-trexler-dark">
-            {data.categories?.[0] && 
-              <Pill>
-                {data.categories[0]}
-              </Pill>
-            }
-
-            {/* Remaining categories without pill */}
+            {data.categories?.[0] && (
+              <Pill>{data.categories[0]}</Pill>
+            )}
             {data.categories?.slice(1).map((cat, idx) => (
-                <span
+              <span
                 key={`${cat}-${idx}`}
                 className="text-xs sm:text-sm font-medium text-trexler-dark"
-                >
+              >
                 {cat}
-                </span>
+              </span>
             ))}
-
           </div>
 
           {/* Title */}
@@ -147,17 +150,17 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Client</p>
-              <p className="mt-2 text-2xl font-base text-gray-600">{data.client}</p>
+              <p className="mt-2 text-xl font-base text-gray-600">{data.client}</p>
             </div>
 
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Services</p>
-              <p className="mt-2 text-2xl font-base text-gray-600">{data.services}</p>
+              <p className="mt-2 text-xl font-base text-gray-600">{data.services}</p>
             </div>
 
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">Timeline</p>
-              <p className="mt-2 text-2xl font-base text-gray-600">{data.timeline}</p>
+              <p className="mt-2 text-xl font-base text-gray-600">{data.timeline}</p>
             </div>
 
             <div>
@@ -174,7 +177,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-8 h-px w-full bg-gray-300" />
 
           {/* Context */}
-          <h3 className="mt-10 text-3xl font-bold text-trexler-dark">The Context</h3>
+          <h3 className="mt-10 text-2xl font-bold text-trexler-dark">The Context</h3>
           <div className="mt-4 space-y-4 text-xl leading-6 text-black/60">
             {data.context.map((p, i) => (
               <p key={i}>{p}</p>
@@ -237,9 +240,13 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
               </ul>
             </div>
           </div>
-
-          {/* Testimonial */}
-          <div className="mt-10 rounded-3xl bg-black/5 p-7 sm:p-9">
+        </div>
+      </div>
+      
+       {/* Testimonial */}
+        <div className="lg:-mt-29 mt-12 rounded-3xl bg-black/5 p-7 sm:p-9
+         lg:ml-42.5
+        ">
             <div className="flex items-center gap-3">
               <span className="text-sm font-semibold text-black/70">{data.testimonial.rating.toFixed(1)}</span>
               <Stars rating={data.testimonial.rating} />
@@ -257,8 +264,6 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
               </span>
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 }
