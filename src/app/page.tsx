@@ -23,28 +23,28 @@ export default function Home() {
             <div className="mb-8 flex justify-center">
               <div className="inline-flex items-center gap-2 rounded-full border  border-gray-400 px-2 py-2 backdrop-blur-sm">
                 <span className="h-2 w-2 rounded-full bg-green-500" />
-                <span className="text-[11px] font-family-inter uppercase tracking-[0.16em] text-trexler-black">
+                <span className="text-[11px] font-family-inter uppercase tracking-[0.16em] text-primary">
                   Available for Enterprise Projects
                 </span>
               </div>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:[10rem] xl:text-8xl font-bold mb-6  font-family-jakarta">
+            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:[10rem] xl:text-8xl font-bold mb-6  font-family-inter">
               <span className="block">
-                <span className=" text-trexler-dark">BUILDIN</span>
+                <span className=" text-primary">BUILDIN</span>
                 <span className="text-gray-700">G</span>
               </span>
                 
               
               
               <span className="block">
-                <span className="text-trexler-dark">TOMORR</span>
-                <span className="text-gray-500">OW&apos;S</span>
+                <span className="text-primary">TOMORR</span>
+                <span className="text-gray-600">OW&apos;S</span>
               </span>
 
               <span className="block drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">
-                <span className="text-trexler-dark">SOLUTION</span>
+                <span className="text-primary">SOLUTION</span>
                 <span className="text-gray-500">S </span>
                 <span className="text-gray-500">TODAY</span>
               </span>
@@ -55,7 +55,7 @@ export default function Home() {
             {/* Subtitle */}
             <div className="flex w-full items-start gap-4 lg:w-auto lg:flex-1 ">
               {/* Yellow line */}
-              <span className="mt-1 h-24 w-1 rounded-full bg-trexler-yellow" />
+              <span className="mt-1 h-24 w-1 rounded-full bg-accent" />
 
               {/* Text */}
               <p className="max-w-xl text-left text-base leading-relaxed text-gray-600 sm:text-lg">
@@ -80,7 +80,7 @@ export default function Home() {
             <span className="text-lg">Get Started</span>
 
             <span className="ml-4 inline-flex h-10 w-10
-            items-center justify-center rounded-full bg-trexler-yellow 
+            items-center justify-center rounded-full bg-accent
               transition-transform duration-300 group-hover:translate-x-1">
               <svg
                 className="h-5 w-5 text-black"
@@ -110,7 +110,7 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
                 {/* Left */}
                 <div>
-                  <span className="text-sm font-semibold uppercase tracking-wider text-trexler-yellow">
+                  <span className="text-sm font-semibold uppercase tracking-wider text-accent">
                     01.IDENTITY
                   </span>
 
@@ -134,9 +134,9 @@ export default function Home() {
 
                 {/* Right */}
                 <div className="lg:pl-0">
-                  <h3 className="text-2xl font-bold font-family-jakarta leading-tight text-black md:text-3xl">
+                  <h3 className="text-2xl font-bold font-family-sans leading-tight text-black md:text-3xl">
                     Trexler Technology Systems is{" "}
-                    <span className="text-trexler-yellow underline decoration-trexler-yellow underline-offset-8 decoration-[3px]">
+                    <span className="text-accent underline decoration-accent underline-offset-8 decoration-[3px]">
                       a premier technology consulting firm
                     </span>{" "}
                     dedicated to delivering high-quality software solutions.
