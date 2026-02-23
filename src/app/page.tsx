@@ -30,10 +30,10 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:[10rem] xl:text-8xl font-bold mb-6  font-family-inter">
+            <h1 className="text-5xl lg:text-8xl font-bold mb-6 font-family-sans">
               <span className="block">
                 <span className=" text-primary">BUILDIN</span>
-                <span className="text-gray-700">G</span>
+                  <span className="text-gray-700">G</span>
               </span>
                 
               
