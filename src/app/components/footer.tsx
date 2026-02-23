@@ -3,6 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
+const SOCIAL_LINKS = [
+  { href: "https://instagram.com", label: "Instagram", icon: "/assets/Instagram-logo.png" },
+  { href: "https://twitter.com", label: "X", icon: "/assets/X-logo.png" },
+  { href: "https://facebook.com", label: "Facebook", icon: "/assets/facebook-logo.png" },
+  { href: "https://youtube.com", label: "YouTube", icon: "/assets/youtube-logo.png" },
+  { href: "https://linkedin.com", label: "LinkedIn", icon: "/assets/linekedin-logo.png" },
+];
+
+
 export default function Footer() {
   return (
     <footer className="w-full bg-white font-family-inter">
@@ -33,29 +43,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
-              {[
-                {
-                  href: "https://instagram.com",
-                  label: "Instagram",
-                  icon: "/assets/Instagram-logo.png",
-                },
-                { href: "https://twitter.com", label: "X", icon: "/assets/X-logo.png" },
-                {
-                  href: "https://facebook.com",
-                  label: "Facebook",
-                  icon: "/assets/facebook-logo.png",
-                },
-                {
-                  href: "https://youtube.com",
-                  label: "YouTube",
-                  icon: "/assets/youtube-logo.png",
-                },
-                {
-                  href: "https://linkedin.com",
-                  label: "LinkedIn",
-                  icon: "/assets/linekedin-logo.png",
-                },
-              ].map((s) => (
+              {SOCIAL_LINKS.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
