@@ -1,6 +1,7 @@
 import Link from "next/link";
 import IdentitySection from "./components/IdentitySection";
 import CapabilitiesSection from "./components/CapabilitiesSection";
+import IndustriesSection from "./components/IndustriesSection";
 
 export default function Home() {
   return (
@@ -50,7 +51,7 @@ export default function Home() {
             {/* Subtitle */}
             <div className="flex w-full items-start gap-4 lg:w-auto lg:flex-1 ">
               {/* Yellow line */}
-              <span className="mt-1 h-24 w-1 rounded-full bg-trexler-yellow" />
+              <span className="mt-1 h-24 w-1 rounded-full bg-accent" />
 
               {/* Text */}
               <p className="max-w-xl text-left text-base leading-relaxed text-gray-600 sm:text-lg">
@@ -71,7 +72,7 @@ export default function Home() {
 
               <span
                 className="ml-4 inline-flex h-10 w-10
-            items-center justify-center rounded-full bg-trexler-yellow 
+            items-center justify-center rounded-full bg-accent
               transition-transform duration-300 group-hover:translate-x-1"
               >
                 <svg
@@ -98,6 +99,10 @@ export default function Home() {
 
       {/* Capabilities Section */}
       <CapabilitiesSection/>
+      
+       {/* Industries Section */}
+       <IndustriesSection/>
+
     </main>
   );
 }
