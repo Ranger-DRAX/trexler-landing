@@ -13,7 +13,6 @@ export default function Home() {
             backgroundImage: "url(/assets/hero-background.png)",
           }}
         />
-
         <div className="container relative z-10 mx-auto max-w-6xl text-center">
           {/* Status Badge */}
           <div className="mb-8 flex justify-center">
@@ -60,7 +59,6 @@ export default function Home() {
                 Data Analytics.
               </p>
             </div>
-
             {/* CTA Button */}
             <Link
               href="/contact"
