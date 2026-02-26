@@ -3,10 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
+const SOCIAL_LINKS = [
+  { href: "https://instagram.com", label: "Instagram", icon: "/assets/Instagram-logo.png" },
+  { href: "https://twitter.com", label: "X", icon: "/assets/X-logo.png" },
+  { href: "https://facebook.com", label: "Facebook", icon: "/assets/facebook-logo.png" },
+  { href: "https://youtube.com", label: "YouTube", icon: "/assets/youtube-logo.png" },
+  { href: "https://linkedin.com", label: "LinkedIn", icon: "/assets/linekedin-logo.png" },
+];
+
+
 export default function Footer() {
   return (
     <footer className="w-full bg-white font-family-inter">
-      <div className="h-1 w-full bg-trexler-yellow" />
+      <div className="h-1 w-full bg-accent" />
       {/* content */}
       <div className="mx-auto w-full max-h-screen px-6 lg:px-20">
 
@@ -18,7 +28,7 @@ export default function Footer() {
           <Link href="/" className="inline-flex items-center">
 
           <Image
-                src="/assets/Trexler-Logo-black.png"
+                src="/assets/Trexler-Logo-2.png"
                 alt="Trexler"
                 width={220}
                 height={60}
@@ -33,29 +43,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
-              {[
-                {
-                  href: "https://instagram.com",
-                  label: "Instagram",
-                  icon: "/assets/Instagram-logo.png",
-                },
-                { href: "https://twitter.com", label: "X", icon: "/assets/X-logo.png" },
-                {
-                  href: "https://facebook.com",
-                  label: "Facebook",
-                  icon: "/assets/facebook-logo.png",
-                },
-                {
-                  href: "https://youtube.com",
-                  label: "YouTube",
-                  icon: "/assets/youtube-logo.png",
-                },
-                {
-                  href: "https://linkedin.com",
-                  label: "LinkedIn",
-                  icon: "/assets/linekedin-logo.png",
-                },
-              ].map((s) => (
+              {SOCIAL_LINKS.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
@@ -110,7 +98,7 @@ export default function Footer() {
               {/* US */}
               <div>
                 <p className="text-[14px] font-semibold text-gray-900">United States</p>
-                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-trexler-yellow">
+                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-accent">
                   Headquarters
                 </p>
                 <p className="mt-3 text-[14px] leading-6 text-gray-700">
@@ -124,7 +112,7 @@ export default function Footer() {
               
               <div>
                 <p className="text-[14px] font-semibold text-gray-900">Indonesia</p>
-                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-trexler-yellow">
+                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-accent">
                   Regional Office
                 </p>
                 <p className="mt-3 text-[14px] leading-6 text-gray-700">
@@ -135,7 +123,7 @@ export default function Footer() {
               {/* Bangladesh */}
               <div>
                 <p className="text-[14px] font-semibold text-gray-900">Bangladesh</p>
-                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-trexler-yellow">
+                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-accent">
                   Regional Office
                 </p>
                 <p className="mt-3 text-[14px] leading-6 text-gray-700">
