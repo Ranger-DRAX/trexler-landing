@@ -16,10 +16,9 @@ export default function Navbar() {
   // Controls the full-screen mobile menu overlay.
   const [open, setOpen] = useState(false);
 
-
   return (
-  <header className="inset-x-0 top-0 z-50 w-full">
-    {/* Mobile header : flat bar with logo + hamburger */}
+    <header className="inset-x-0 top-0 z-50 w-full">
+      {/* Mobile header : flat bar with logo + hamburger */}
       <div className="md:hidden w-full bg-primary px-4 py-4">
         <div className="mx-auto flex max-w-screen-2xl items-center justify-between">
           {/* Logo */}
@@ -113,47 +112,45 @@ export default function Navbar() {
         </div>
       </div>
 
-
       {/* Mobile menu overlay */}
       {open && (
         <div className="fixed inset-0 z-999 bg-primary">
-            <div className="relative flex h-full flex-col items-end px-2 py-5 gap-25">
-              {/* Right-aligned column menu */}
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="self-end text-white p-2 mb-2"
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M6 6L18 18M18 6L6 18"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
+          <div className="relative flex h-full flex-col items-end px-2 py-5 gap-25">
+            {/* Right-aligned column menu */}
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="self-end text-white p-2 mb-2"
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 6L18 18M18 6L6 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
 
-              {/* menu list */}
-              <nav className="flex flex-col items-end gap-8 pr-4 ">
-                {mobileItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className={`text-3xl font-sans transition ${
-                      item.label === "Home" ? "text-accent" : "text-white"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
+            {/* menu list */}
+            <nav className="flex flex-col items-end gap-8 pr-4 ">
+              {mobileItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`text-3xl font-sans transition ${
+                    item.label === "Home" ? "text-accent" : "text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
+        </div>
       )}
-
     </header>
   );
 }
