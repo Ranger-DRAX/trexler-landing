@@ -1,8 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import ProjectsSlider, { type ProjectSlide } from "@/app/components/ProjectsSlider";
-import ProjectDescribe, { type DescribeData } from "@/app/components/ProjectDescribe";
+import ProjectsSlider, { type ProjectSlide } from "@/components/projects/ProjectsSlider"; 
+import ProjectDescribe, { type DescribeData } from "@/components/projects/ProjectDescribe";
+
+
+
+
 
 type Project = ProjectSlide & { describe: DescribeData };
 
