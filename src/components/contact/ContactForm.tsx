@@ -1,12 +1,9 @@
 "use client";
 
-
-
 export default function ContactForm() {
   return (
     <main className=" bg-white px-4 pt-5 md:pt-8 md:px-10  pb-4 md:pb-25">
-    <section className="mx-auto w-full max-w-screen-2xl rounded-3xl bg-[#f3f3f3] p-8 md:p-10 font-family-inter">
-
+      <section className="mx-auto w-full max-w-screen-2xl rounded-3xl bg-[#f3f3f3] p-8 md:p-10 font-family-inter">
         <div className="grid gap-2 md:grid-cols-[320px_1fr]">
           {/* Left */}
           <div className="flex flex-col gap-6">
@@ -26,7 +23,7 @@ export default function ContactForm() {
             {/* Top row */}
             <div className="grid gap-8 md:grid-cols-3">
               <div className="">
-                  <label className="block text-sm font-semibold text-black/80">
+                <label className="block text-sm font-semibold text-black/80">
                   Your Name
                 </label>
                 <input
@@ -44,8 +41,9 @@ export default function ContactForm() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                className="h-11 mt-2 md:mt-2  w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black 
-                  outline-none ring-0 focus:border-[#f3c969]"/>
+                  className="h-11 mt-2 md:mt-2  w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black 
+                  outline-none ring-0 focus:border-[#f3c969]"
+                />
               </div>
 
               <div className="space-y-2">
