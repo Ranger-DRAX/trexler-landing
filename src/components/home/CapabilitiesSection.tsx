@@ -3,18 +3,18 @@ import Image from "next/image";
 export default function CapabilitiesSection() {
   return (
     <section id="capabilities" className="bg-white px-6 py-16">
-      <div className="mx-auto w-full  max-w-screen-2xl">
+      <div className="mx-auto w-full max-w-screen-2xl">
         {/* Header */}
         <div className="mb-10">
-          <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+          <span className="text-accent text-sm font-semibold tracking-wider uppercase">
             02. CAPABILITIES
           </span>
 
-          <h2 className="mt-4 text-5xl font-bold font-family-jakarta text-black md:text-6xl">
+          <h2 className="font-family-jakarta mt-4 text-5xl font-bold text-black md:text-6xl">
             Expertise.
           </h2>
 
-          <p className="mt-6 max-w-xl text-xl font-semibold leading-relaxed text-secondary">
+          <p className="text-secondary mt-6 max-w-xl text-xl leading-relaxed font-semibold">
             Comprehensive technology solutions tailored{" "}
             <br className="hidden sm:block" />
             for modern enterprises.
@@ -25,66 +25,45 @@ export default function CapabilitiesSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/Digital-Transformation.png"
+              src="/assets/free-icon/Digital-Transformation.svg"
               alt="Digital Transformation"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               Digital Transformation
             </h3>
           </div>
 
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/Large-Software-Systems.png"
+              src="/assets/free-icon/Large-Software-Systems.svg"
               alt="Large Software Systems"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               Large Software Systems
             </h3>
           </div>
 
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/fintech-solutions.png"
+              src="/assets/free-icon/fintech-solutions.svg"
               alt="FinTech Solutions"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               FinTech Solutions
             </h3>
           </div>
@@ -92,7 +71,7 @@ export default function CapabilitiesSection() {
 
         {/* Description panel */}
         <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-          <p className="text-base leading-relaxed text-gray-900 font-family-inter">
+          <p className="font-family-inter text-base leading-relaxed text-gray-900">
             Trexler Technology Systems has extensive experience in
             revolutionizing businesses through seamless digital transformation.
             With a proven track record in modernizing existing infrastructure,
@@ -103,7 +82,7 @@ export default function CapabilitiesSection() {
             solutions that maximize efficiency and drive innovation.
           </p>
 
-          <p className="mt-5 text-base leading-relaxed text-gray-900 font-family-inter">
+          <p className="font-family-inter mt-5 text-base leading-relaxed text-gray-900">
             At Trexler, we recognize that digital transformation is not a
             one-size-fits-all endeavor. Therefore, our team of experts
             collaborates closely with clients to conduct thorough assessments,
@@ -114,7 +93,7 @@ export default function CapabilitiesSection() {
             technologies to deliver transformative results.
           </p>
 
-          <p className="mt-5 text-base leading-relaxed text-gray-900 font-family-inter">
+          <p className="font-family-inter mt-5 text-base leading-relaxed text-gray-900">
             Our commitment to excellence extends beyond the initial
             implementation phase. We provide comprehensive support and
             maintenance services to ensure that our solutions continue to
@@ -129,66 +108,45 @@ export default function CapabilitiesSection() {
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/Healthcare-Systems.png"
+              src="/assets/free-icon/Healthcare-Systems.svg"
               alt="Healthcare Systems"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               Healthcare Systems
             </h3>
           </div>
 
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/Data-Analytics.png"
+              src="/assets/free-icon/Data-Analytics.svg"
               alt="Data Analytics & Reporting"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               Data Analytics &amp; Reporting
             </h3>
           </div>
 
           <div
             tabIndex={0}
-            className="
-                      rounded-2xl border border-gray-100 bg-white p-8 shadow-sm
-                      transition-colors duration-200 ease-out
-                      hover:border-accent
-                      active:border-accent
-                      focus:border-accent
-                      focus:outline-none
-                    "
+            className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src="/assets/free-icon/Non-profit.png"
+              src="/assets/free-icon/Non-profit.svg"
               alt="Non-Profit Support"
               width={56}
               height={56}
             />
-            <h3 className="mt-6 text-xl font-bold font-family-inter text-gray-900">
+            <h3 className="font-family-inter mt-6 text-xl font-bold text-gray-900">
               Non-Profit Support
             </h3>
           </div>
