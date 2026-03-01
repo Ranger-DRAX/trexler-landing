@@ -28,11 +28,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/Digital-Transformation.svg"
-=======
-              src="/assets/free-icon/Digital-Transformation.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="Digital Transformation"
               width={56}
               height={56}
@@ -47,11 +43,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/Large-Software-Systems.svg"
-=======
-              src="/assets/free-icon/Large-Software-Systems.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="Large Software Systems"
               width={56}
               height={56}
@@ -66,11 +58,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/fintech-solutions.svg"
-=======
-              src="/assets/free-icon/fintech-solutions.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="FinTech Solutions"
               width={56}
               height={56}
@@ -123,11 +111,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/Healthcare-Systems.svg"
-=======
-              src="/assets/free-icon/Healthcare-Systems.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="Healthcare Systems"
               width={56}
               height={56}
@@ -142,11 +126,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/Data-Analytics.svg"
-=======
-              src="/assets/free-icon/Data-Analytics.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="Data Analytics & Reporting"
               width={56}
               height={56}
@@ -161,11 +141,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-<<<<<<< HEAD
               src="/assets/free-icon/Non-profit.svg"
-=======
-              src="/assets/free-icon/Non-profit.png"
->>>>>>> 174effc (feat(capabilities): add capabilities section (#9))
               alt="Non-Profit Support"
               width={56}
               height={56}
