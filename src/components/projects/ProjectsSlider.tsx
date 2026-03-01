@@ -106,7 +106,7 @@ export default function ProjectsSlider({
         {/* Scrollbar track + thumb */}
         <div className="relative h-[4px] flex-1 overflow-hidden rounded-full bg-black/10">
           <div
-            className="bg-trexler-yellow absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full transition-[left] duration-300"
+            className="bg-accent absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full transition-[left] duration-300"
             style={{ width: THUMB_W, left: thumbLeft }}
           />
         </div>
@@ -133,7 +133,7 @@ export default function ProjectsSlider({
             type="button"
             onClick={() => swiperRef.current?.slideNext()}
             aria-label="Next"
-            className="bg-trexler-yellow grid h-10 w-10 place-items-center rounded-full hover:brightness-95 disabled:opacity-40"
+            className="bg-accent grid h-10 w-10 place-items-center rounded-full hover:brightness-95 disabled:opacity-40"
             disabled={current === total}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">

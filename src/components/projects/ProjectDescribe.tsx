@@ -52,12 +52,12 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
         {/* Right Content */}
         <div className="w-full flex-1">
           {/* Categories with pill */}
-          <div className="text-trexler-dark flex flex-wrap items-center gap-3">
+          <div className="text-primary flex flex-wrap items-center gap-3">
             {data.categories?.[0] && <Pill>{data.categories[0]}</Pill>}
             {data.categories?.slice(1).map((cat, idx) => (
               <span
                 key={`${cat}-${idx}`}
-                className="text-trexler-dark text-xs font-medium sm:text-sm"
+                className="text-primary text-xs font-medium sm:text-sm"
               >
                 {cat}
               </span>
@@ -65,14 +65,14 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           </div>
 
           {/* Title */}
-          <h2 className="text-trexler-dark mt-4 text-3xl font-bold tracking-tight">
+          <h2 className="text-primary mt-4 text-3xl font-bold tracking-tight">
             {data.title}
           </h2>
 
           {/* Meta row */}
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
+              <p className="text-primary text-sm font-bold tracking-wider uppercase">
                 Client
               </p>
               <p className="font-base mt-2 text-xl text-gray-600">
@@ -81,7 +81,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
+              <p className="text-primary text-sm font-bold tracking-wider uppercase">
                 Services
               </p>
               <p className="font-base mt-2 text-xl text-gray-600">
@@ -90,7 +90,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
+              <p className="text-primary text-sm font-bold tracking-wider uppercase">
                 Timeline
               </p>
               <p className="font-base mt-2 text-xl text-gray-600">
@@ -99,7 +99,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
+              <p className="text-primary text-sm font-bold tracking-wider uppercase">
                 Tools
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -114,15 +114,13 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-8 h-px w-full bg-gray-300" />
 
           {/* Context */}
-          <h3 className="text-trexler-dark mt-10 text-2xl font-bold">
-            The Context
-          </h3>
+          <h3 className="text-primary mt-10 text-2xl font-bold">The Context</h3>
           <div className="mt-4 space-y-4 text-xl leading-6 text-black/60">
             {data.context.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
-          <div className="text-trexler-dark mt-4 space-y-4 text-xl leading-6">
+          <div className="text-primary mt-4 space-y-4 text-xl leading-6">
             {data.context_2.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -131,9 +129,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           {/* Deliverables + Impact */}
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
-              <p className="text-trexler-dark text-xl font-bold">
-                Deliverables
-              </p>
+              <p className="text-primary text-xl font-bold">Deliverables</p>
               <ul className="mt-4 space-y-2">
                 {data.deliverables.map((d) => (
                   <CheckItem key={d}>{d}</CheckItem>
@@ -142,7 +138,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-trexler-dark text-xl font-bold">Impact</p>
+              <p className="text-primary text-xl font-bold">Impact</p>
               <ul className="mt-4 space-y-2">
                 {data.impact.map((m) => (
                   <UpItem key={m}>{m} </UpItem>
@@ -159,10 +155,8 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             <IconBox variant="challenge" />
             <div className="flex-1">
               <h4 className="text-xl font-bold text-black">Challenge</h4>
-              <p className="text-trexler-dark mt-2 text-lg">
-                {data.challengeIntro}
-              </p>
-              <ul className="text-trexler-dark mt-2 list-disc space-y-1 px-7 text-base">
+              <p className="text-primary mt-2 text-lg">{data.challengeIntro}</p>
+              <ul className="text-primary mt-2 list-disc space-y-1 px-7 text-base">
                 {data.challengeBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -175,10 +169,8 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             <IconBox variant="solution" />
             <div className="flex-1">
               <h4 className="text-xl font-bold text-black">Solution</h4>
-              <p className="text-trexler-dark mt-2 text-lg">
-                {data.solutionIntro}
-              </p>
-              <ul className="text-trexler-dark mt-2 list-disc space-y-1 px-7 text-base">
+              <p className="text-primary mt-2 text-lg">{data.solutionIntro}</p>
+              <ul className="text-primary mt-2 list-disc space-y-1 px-7 text-base">
                 {data.solutionBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
