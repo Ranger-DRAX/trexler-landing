@@ -1,4 +1,6 @@
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/pagination";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
