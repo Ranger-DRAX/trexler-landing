@@ -2,8 +2,8 @@
 
 export default function ContactForm() {
   return (
-    <main className=" bg-white px-4 pt-5 md:pt-8 md:px-10  pb-4 md:pb-25">
-      <section className="mx-auto w-full max-w-screen-2xl rounded-3xl bg-[#f3f3f3] p-8 md:p-10 font-family-inter">
+    <main className="bg-white px-4 pt-5 pb-4 md:px-10 md:pt-8 md:pb-25">
+      <section className="font-family-inter mx-auto w-full max-w-screen-2xl rounded-3xl bg-[#f3f3f3] p-8 md:p-10">
         <div className="grid gap-2 md:grid-cols-[320px_1fr]">
           {/* Left */}
           <div className="flex flex-col gap-6">
@@ -11,7 +11,7 @@ export default function ContactForm() {
               GET IN TOUCH
             </p>
 
-            <h1 className="text-4xl font-extrabold leading-[1.05] text-black md:text-5xl pb-8">
+            <h1 className="pb-8 text-4xl leading-[1.05] font-extrabold text-black md:text-5xl">
               Let’s <br />
               start our <br />
               project.
@@ -29,8 +29,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="h-11 mt-2 md:mt-2  w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black 
-                  outline-none ring-0 focus:border-[#f3c969]"
+                  className="mt-2 h-11 w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black ring-0 outline-none focus:border-[#f3c969] md:mt-2"
                 />
               </div>
 
@@ -41,8 +40,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="h-11 mt-2 md:mt-2  w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black 
-                  outline-none ring-0 focus:border-[#f3c969]"
+                  className="mt-2 h-11 w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black ring-0 outline-none focus:border-[#f3c969] md:mt-2"
                 />
               </div>
 
@@ -53,7 +51,7 @@ export default function ContactForm() {
                 <input
                   type="tel"
                   placeholder="Enter phone number"
-                  className="h-11 mt-2 md:mt-2 w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black outline-none focus:border-[#f3c969]"
+                  className="mt-2 h-11 w-full rounded-xl border border-transparent bg-white px-4 text-sm text-black outline-none focus:border-[#f3c969] md:mt-2"
                 />
               </div>
             </div>
@@ -64,7 +62,7 @@ export default function ContactForm() {
                 Message
               </label>
 
-              <div className="rounded-2xl bg-white p-4 mt-2 md:mt-2 md:px-2 px-2">
+              <div className="mt-2 rounded-2xl bg-white p-4 px-2 md:mt-2 md:px-2">
                 <textarea
                   rows={5}
                   placeholder="Describe your project"

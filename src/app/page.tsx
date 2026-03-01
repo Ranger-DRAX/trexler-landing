@@ -5,7 +5,6 @@ import IndustriesSection from "@/components/home/IndustriesSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
 import CTASection from "@/components/home/ctaSection";
 
-
 export default function Home() {
   return (
     <main>
