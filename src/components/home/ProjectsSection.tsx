@@ -34,7 +34,7 @@ export default function ProjectsSection() {
                     {/* Icon */}
                     <div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl sm:h-20 sm:w-20">
                       <Image
-                        src="/assets/baker-baby-app.svg"
+                        src="/assets/project-section-icon/baker-baby-app.svg"
                         alt="Baker Baby App icon"
                         width={80}
                         height={80}
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                     {/* Icon */}
                     <div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl sm:h-20 sm:w-20">
                       <Image
-                        src="/assets/Reliable Force-frame.svg"
+                        src="/assets/project-section-icon/Reliable Force-frame.svg"
                         alt="Reliable Force icon"
                         width={80}
                         height={80}
