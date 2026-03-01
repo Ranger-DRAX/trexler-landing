@@ -38,33 +38,26 @@ export type DescribeData = {
 
 export default function ProjectDescribe({ data }: { data: DescribeData }) {
   return (
-    <section className="mx-auto w-full max-w-375 font-family-inter">
-      <div className="flex flex-row items-start gap-4 lg:gap-12.5 lg:min-h-298">
+    <section className="font-family-inter mx-auto w-full max-w-375">
+      <div className="flex flex-row items-start gap-4 lg:min-h-298 lg:gap-12.5">
         {/* Left Number Block */}
         <div className="shrink-0">
-          <div
-            className="
-            flex flex-col items-center justify-start
-            w-14 h-20 p-3 gap-2 rounded-2xl
-            lg:w-30 lg:h-55 lg:p-4 lg:rounded-3xl
-            bg-[#F6C73A]
-          "
-          >
-            <span className="text-3xl lg:text-6xl font-bold text-black leading-tight">
+          <div className="flex h-20 w-14 flex-col items-center justify-start gap-2 rounded-2xl bg-[#F6C73A] p-3 lg:h-55 lg:w-30 lg:rounded-3xl lg:p-4">
+            <span className="text-3xl leading-tight font-bold text-black lg:text-6xl">
               {data.number}
             </span>
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="flex-1 w-full">
+        <div className="w-full flex-1">
           {/* Categories with pill */}
-          <div className="flex flex-wrap items-center gap-3 text-trexler-dark">
+          <div className="text-trexler-dark flex flex-wrap items-center gap-3">
             {data.categories?.[0] && <Pill>{data.categories[0]}</Pill>}
             {data.categories?.slice(1).map((cat, idx) => (
               <span
                 key={`${cat}-${idx}`}
-                className="text-xs sm:text-sm font-medium text-trexler-dark"
+                className="text-trexler-dark text-xs font-medium sm:text-sm"
               >
                 {cat}
               </span>
@@ -72,44 +65,44 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           </div>
 
           {/* Title */}
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-trexler-dark">
+          <h2 className="text-trexler-dark mt-4 text-3xl font-bold tracking-tight">
             {data.title}
           </h2>
 
           {/* Meta row */}
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">
+              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
                 Client
               </p>
-              <p className="mt-2 text-xl font-base text-gray-600">
+              <p className="font-base mt-2 text-xl text-gray-600">
                 {data.client}
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">
+              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
                 Services
               </p>
-              <p className="mt-2 text-xl font-base text-gray-600">
+              <p className="font-base mt-2 text-xl text-gray-600">
                 {data.services}
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">
+              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
                 Timeline
               </p>
-              <p className="mt-2 text-xl font-base text-gray-600">
+              <p className="font-base mt-2 text-xl text-gray-600">
                 {data.timeline}
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-trexler-dark">
+              <p className="text-trexler-dark text-sm font-bold tracking-wider uppercase">
                 Tools
               </p>
-              <div className="mt-2 flex flex-wrap gap-2 ">
+              <div className="mt-2 flex flex-wrap gap-2">
                 {data.tools.map((t) => (
                   <ToolChip key={t}>{t}</ToolChip>
                 ))}
@@ -121,7 +114,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <div className="mt-8 h-px w-full bg-gray-300" />
 
           {/* Context */}
-          <h3 className="mt-10 text-2xl font-bold text-trexler-dark">
+          <h3 className="text-trexler-dark mt-10 text-2xl font-bold">
             The Context
           </h3>
           <div className="mt-4 space-y-4 text-xl leading-6 text-black/60">
@@ -129,19 +122,19 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
               <p key={i}>{p}</p>
             ))}
           </div>
-          <div className="mt-4 space-y-4 text-xl leading-6 text-trexler-dark">
+          <div className="text-trexler-dark mt-4 space-y-4 text-xl leading-6">
             {data.context_2.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
 
           {/* Deliverables + Impact */}
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
-              <p className="text-xl font-bold text-trexler-dark">
+              <p className="text-trexler-dark text-xl font-bold">
                 Deliverables
               </p>
-              <ul className="mt-4 space-y-2 ">
+              <ul className="mt-4 space-y-2">
                 {data.deliverables.map((d) => (
                   <CheckItem key={d}>{d}</CheckItem>
                 ))}
@@ -149,7 +142,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             </div>
 
             <div>
-              <p className="text-xl font-bold text-trexler-dark">Impact</p>
+              <p className="text-trexler-dark text-xl font-bold">Impact</p>
               <ul className="mt-4 space-y-2">
                 {data.impact.map((m) => (
                   <UpItem key={m}>{m} </UpItem>
@@ -166,10 +159,10 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             <IconBox variant="challenge" />
             <div className="flex-1">
               <h4 className="text-xl font-bold text-black">Challenge</h4>
-              <p className="mt-2 text-lg text-trexler-dark ">
+              <p className="text-trexler-dark mt-2 text-lg">
                 {data.challengeIntro}
               </p>
-              <ul className="mt-2 list-disc px-7 space-y-1 text-base text-trexler-dark">
+              <ul className="text-trexler-dark mt-2 list-disc space-y-1 px-7 text-base">
                 {data.challengeBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -182,10 +175,10 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
             <IconBox variant="solution" />
             <div className="flex-1">
               <h4 className="text-xl font-bold text-black">Solution</h4>
-              <p className="mt-2 text-lg text-trexler-dark">
+              <p className="text-trexler-dark mt-2 text-lg">
                 {data.solutionIntro}
               </p>
-              <ul className="mt-2 list-disc px-7 space-y-1  text-base text-trexler-dark">
+              <ul className="text-trexler-dark mt-2 list-disc space-y-1 px-7 text-base">
                 {data.solutionBullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -196,11 +189,7 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
       </div>
 
       {/* Testimonial */}
-      <div
-        className="lg:-mt-29 mt-12 rounded-3xl bg-black/5 p-7 sm:p-9
-         lg:ml-42.5
-        "
-      >
+      <div className="mt-12 rounded-3xl bg-black/5 p-7 sm:p-9 lg:-mt-29 lg:ml-42.5">
         <div className="flex items-center gap-3">
           <span className="text-sm font-semibold text-black/70">
             {data.testimonial.rating.toFixed(1)}
@@ -208,12 +197,12 @@ export default function ProjectDescribe({ data }: { data: DescribeData }) {
           <Stars rating={data.testimonial.rating} />
         </div>
 
-        <p className="mt-5 text-lg sm:text-xl font-semibold italic text-black/80">
+        <p className="mt-5 text-lg font-semibold text-black/80 italic sm:text-xl">
           “{data.testimonial.quote}”
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
-          <span className="text-lg font-bold text-black ">
+          <span className="text-lg font-bold text-black">
             {data.testimonial.name}
           </span>
           <span className="text-black/30">|</span>

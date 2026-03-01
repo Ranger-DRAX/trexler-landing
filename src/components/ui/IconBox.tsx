@@ -9,13 +9,13 @@ export function IconBox({ variant }: IconBoxProps) {
     <div className="flex">
       {isChallenge ? (
         <div className="relative h-10 w-10">
-          <span className="absolute inset-0 rounded-full border-4 border-trexler-yellow" />
-          <span className="absolute inset-2 rounded-full border-4 border-trexler-yellow" />
-          <span className="absolute inset-4 rounded-full border-4 border-trexler-yellow" />
+          <span className="border-trexler-yellow absolute inset-0 rounded-full border-4" />
+          <span className="border-trexler-yellow absolute inset-2 rounded-full border-4" />
+          <span className="border-trexler-yellow absolute inset-4 rounded-full border-4" />
         </div>
       ) : (
-        <div className="grid h-10 w-10 place-items-center rounded-3xl bg-trexler-blue border border-black/10">
-          <span className="text-white text-2xl">✓</span>
+        <div className="bg-trexler-blue grid h-10 w-10 place-items-center rounded-3xl border border-black/10">
+          <span className="text-2xl text-white">✓</span>
         </div>
       )}
     </div>

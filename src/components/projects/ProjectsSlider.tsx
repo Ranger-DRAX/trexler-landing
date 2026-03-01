@@ -38,9 +38,9 @@ export default function ProjectsSlider({
       : `calc(${activeIndex} * (100% - ${THUMB_W}) / ${denom})`;
 
   return (
-    <section className="mx-auto w-full max-w-[1500px] flex flex-col items-center gap-8">
+    <section className="mx-auto flex w-full max-w-[1500px] flex-col items-center gap-8">
       {/* Slider Frame */}
-      <div className="w-full  h-102 sm:h-116.25 ">
+      <div className="h-102 w-full sm:h-116.25">
         <Swiper
           onSwiper={(s) => (swiperRef.current = s)}
           onSlideChange={(s) => {
@@ -50,17 +50,14 @@ export default function ProjectsSlider({
           slidesPerView={1}
           spaceBetween={32}
           grabCursor
-          className="h-full w-full "
+          className="h-full w-full"
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id} className="h-full">
-              <div className="h-full w-full flex items-center justify-center">
+              <div className="flex h-full w-full items-center justify-center">
                 {/* MOBILE: 1 big image */}
-                <div className="w-full flex items-center justify-center lg:hidden">
-                  <div
-                    className="relative overflow-hidden rounded-[24px] bg-white 
-                  w-full max-w-[384px] h-[393.49px]"
-                  >
+                <div className="flex w-full items-center justify-center lg:hidden">
+                  <div className="relative h-[393.49px] w-full max-w-[384px] overflow-hidden rounded-[24px] bg-white">
                     <Image
                       src={project.shots[0].src}
                       alt={
@@ -79,11 +76,7 @@ export default function ProjectsSlider({
                   {project.shots.map((shot, idx) => (
                     <div
                       key={`${project.id}-${idx}`}
-                      className="
-                        relative overflow-hidden rounded-[24px] bg-white
-                        w-full max-w-[384px]
-                        h-[393.49px] lg:w-[384px]
-                        flex-1"
+                      className="relative h-[393.49px] w-full max-w-[384px] flex-1 overflow-hidden rounded-[24px] bg-white lg:w-[384px]"
                     >
                       <Image
                         src={shot.src}
@@ -105,15 +98,15 @@ export default function ProjectsSlider({
       </div>
 
       {/* Bottom controls */}
-      <div className="w-full flex items-center gap-5">
+      <div className="flex w-full items-center gap-5">
         <div className="min-w-[60px] text-lg font-semibold text-black/60">
           {current}/{total}
         </div>
 
         {/* Scrollbar track + thumb */}
-        <div className="relative h-[4px] flex-1 rounded-full bg-black/10 overflow-hidden">
+        <div className="relative h-[4px] flex-1 overflow-hidden rounded-full bg-black/10">
           <div
-            className="absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-trexler-yellow transition-[left] duration-300"
+            className="bg-trexler-yellow absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full transition-[left] duration-300"
             style={{ width: THUMB_W, left: thumbLeft }}
           />
         </div>
@@ -123,7 +116,7 @@ export default function ProjectsSlider({
             type="button"
             onClick={() => swiperRef.current?.slidePrev()}
             aria-label="Previous"
-            className="grid h-10 w-10 place-items-center rounded-full bg-white border border-black/10 hover:bg-gray-50 disabled:opacity-40"
+            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white hover:bg-gray-50 disabled:opacity-40"
             disabled={current === 1}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -140,7 +133,7 @@ export default function ProjectsSlider({
             type="button"
             onClick={() => swiperRef.current?.slideNext()}
             aria-label="Next"
-            className="grid h-10 w-10 place-items-center rounded-full bg-trexler-yellow hover:brightness-95 disabled:opacity-40"
+            className="bg-trexler-yellow grid h-10 w-10 place-items-center rounded-full hover:brightness-95 disabled:opacity-40"
             disabled={current === total}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">

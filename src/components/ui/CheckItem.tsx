@@ -4,8 +4,8 @@ type CheckItemProps = { children: React.ReactNode };
 
 export function CheckItem({ children }: CheckItemProps) {
   return (
-    <li className="flex items-start gap-2 text-lg text-trexler-dark">
-      <span className="text-orange-600 text-xl">✓</span>
+    <li className="text-trexler-dark flex items-start gap-2 text-lg">
+      <span className="text-xl text-orange-600">✓</span>
       <span className="text-base">{children}</span>
     </li>
   );

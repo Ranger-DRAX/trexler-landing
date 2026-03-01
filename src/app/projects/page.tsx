@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import ProjectsSlider, { type ProjectSlide } from "@/components/projects/ProjectsSlider"; 
-import ProjectDescribe, { type DescribeData } from "@/components/projects/ProjectDescribe";
-
-
-
-
+import ProjectsSlider, {
+  type ProjectSlide,
+} from "@/components/projects/ProjectsSlider";
+import ProjectDescribe, {
+  type DescribeData,
+} from "@/components/projects/ProjectDescribe";
 
 type Project = ProjectSlide & { describe: DescribeData };
 
@@ -28,13 +28,17 @@ const projects: Project[] = [
       tools: ["Figma", "Next.js", "Tailwind", "CMS"],
 
       context: [
-        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply."
+        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply.",
       ],
-      context_2:[
-        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
+      context_2: [
+        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike.",
       ],
-      deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
-      impact: ["45% Efficiency Gain","Real-time Monitoring"],
+      deliverables: [
+        "Corporate Identity",
+        "Scalable Infrastructure",
+        "Resource Management",
+      ],
+      impact: ["45% Efficiency Gain", "Real-time Monitoring"],
       challengeIntro:
         "Need for accurate, real-time health tracking and personalized daily insights for company profile website.",
       challengeBullets: [
@@ -61,7 +65,7 @@ const projects: Project[] = [
       },
     },
   },
-    {
+  {
     id: 2,
     shots: [
       { src: "/assets/Reliable-Force-screen-shot-1.png" },
@@ -78,12 +82,17 @@ const projects: Project[] = [
       tools: ["Figma", "Next.js", "Tailwind", "CMS"],
 
       context: [
-        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply."      ],
-      context_2:[
-        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike."
+        "Reliable Force is a multifaceted leader providing comprehensive solutions across business consultation, trading, services, construction, and manpower supply.",
       ],
-      deliverables: ["Corporate Identity", "Scalable Infrastructure", "Resource Management"],
-      impact: ["45% Efficiency Gain","Real-time Monitoring"],
+      context_2: [
+        "We were tasked with building a unified “Digital Nerve Center”—a high-performance ecosystem capable of managing diverse service lines while providing real-time data visibility to corporate stakeholders and field operators alike.",
+      ],
+      deliverables: [
+        "Corporate Identity",
+        "Scalable Infrastructure",
+        "Resource Management",
+      ],
+      impact: ["45% Efficiency Gain", "Real-time Monitoring"],
 
       challengeIntro:
         "Need for accurate, real-time health tracking and personalized daily insights for company profile website.",
@@ -110,17 +119,20 @@ const projects: Project[] = [
         company: "Reliable Force Co.",
       },
     },
-  }
+  },
   // Add projects 02..10 here (shots + describe)
 ];
 
 export default function ProjectPage() {
   const [activeProject, setActiveProject] = useState(0);
 
-  const current = useMemo(() => projects[activeProject] ?? projects[0], [activeProject]);
+  const current = useMemo(
+    () => projects[activeProject] ?? projects[0],
+    [activeProject],
+  );
 
   return (
-    <main className="min-h-svh px-5 sm:px-8 lg:px-18 py-14 space-y-14">
+    <main className="min-h-svh space-y-14 px-5 py-14 sm:px-8 lg:px-18">
       <ProjectsSlider projects={projects} onProjectChange={setActiveProject} />
       <ProjectDescribe data={current.describe} />
     </main>
