@@ -2,24 +2,21 @@
 
 @theme {
   /* Colors - must use --color-* prefix */
-  --color-primary: #1d1f22;       /* was trexler-dark */
-  --color-accent: #f6c73a;        /* was trexler-yellow */
-  --color-body: #626671;          /* was trexler-body */
-  --color-secondary: #354C76;     /* was trexler-blue */
+  --color-primary: #1d1f22; /* was trexler-dark */
+  --color-accent: #f6c73a; /* was trexler-yellow */
+  --color-body: #626671; /* was trexler-body */
+  --color-secondary: #354c76; /* was trexler-blue */
 
   /* Font Family - must use --font-family-* prefix */
   --font-family-sans: "Inter", sans-serif;
-
-
 }
 
 :root {
   --background: #ffffff;
-
 }
 
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
 

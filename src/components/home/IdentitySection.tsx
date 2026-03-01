@@ -10,7 +10,7 @@ export default function IdentitySection() {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
             {/* Left */}
             <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+              <span className="text-accent text-sm font-semibold tracking-wider uppercase">
                 01.IDENTITY
               </span>
 
@@ -34,9 +34,9 @@ export default function IdentitySection() {
 
             {/* Right */}
             <div className="lg:pl-0">
-              <h3 className="text-2xl font-bold font-family-sans leading-tight text-black md:text-3xl">
+              <h3 className="font-family-sans text-2xl leading-tight font-bold text-black md:text-3xl">
                 Trexler Technology Systems is{" "}
-                <span className="text-accent underline decoration-accent underline-offset-8 decoration-[3px]">
+                <span className="text-accent decoration-accent underline decoration-[3px] underline-offset-8">
                   a premier technology consulting firm
                 </span>{" "}
                 dedicated to delivering high-quality software solutions.
@@ -60,7 +60,7 @@ export default function IdentitySection() {
           </div>
 
           {/* Map - Desktop only (absolute positioned) */}
-          <div className="pointer-events-none absolute left-12 bottom-12 translate-y-10 hidden lg:block">
+          <div className="pointer-events-none absolute bottom-12 left-12 hidden translate-y-10 lg:block">
             <div className="relative h-40 w-105">
               <Image
                 src="/assets/global-Map.png"
