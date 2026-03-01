@@ -1,5 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
-import IdentitySection  from "@/components/home/IdentitySection";
+import IdentitySection from "@/components/home/IdentitySection";
 import CapabilitiesSection from "@/components/home/CapabilitiesSection";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <IdentitySection />
-      <CapabilitiesSection/>
+      <CapabilitiesSection />
     </main>
   );
 }
