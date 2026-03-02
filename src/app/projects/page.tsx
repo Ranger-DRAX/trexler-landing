@@ -8,15 +8,19 @@ import ProjectDescribe, {
   type DescribeData,
 } from "@/components/projects/ProjectDescribe";
 
+import slideContentImage1 from "@/assets/slide-content/Reliable-Force-screen-shot-1.png";
+import slideContentImage2 from "@/assets/slide-content/Reliable-Force-screen-shot-2.png";
+import slideContentImage3 from "@/assets/slide-content/Reliable-Force-screen-shot-3.png";
+
 type Project = ProjectSlide & { describe: DescribeData };
 
 const projects: Project[] = [
   {
     id: 1,
     shots: [
-      { src: "/assets/Reliable-Force-screen-shot-1.png" },
-      { src: "/assets/Reliable-Force-screen-shot-2.png" },
-      { src: "/assets/Reliable-Force-screen-shot-3.png" },
+      { src: slideContentImage1.src },
+      { src: slideContentImage2.src },
+      { src: slideContentImage3.src },
     ],
     describe: {
       number: "01",
