@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import BakerBabyAppIcon from "@/assets/project-section-icon/baker-baby-app.svg";
+import ReliableForceIcon from "@/assets/project-section-icon/Reliable Force-frame.svg";
+import BakerBabyImage from "@/assets/project-section-image/project-baker-screen.png";
+import ReliableForceImage from "@/assets/project-section-image/project-reliable-screen.png";
 
 export default function ProjectsSection() {
   return (
@@ -34,7 +38,7 @@ export default function ProjectsSection() {
                     {/* Icon */}
                     <div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl sm:h-20 sm:w-20">
                       <Image
-                        src="/assets/project-section-icon/baker-baby-app.svg"
+                        src={BakerBabyAppIcon}
                         alt="Baker Baby App icon"
                         width={80}
                         height={80}
@@ -103,7 +107,7 @@ export default function ProjectsSection() {
               <div className="relative flex items-center justify-end">
                 <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl">
                   <Image
-                    src="/assets/project-baker-screen.png"
+                    src={BakerBabyImage}
                     alt="Baker Baby "
                     fill
                     className="object-fill"
@@ -127,7 +131,7 @@ export default function ProjectsSection() {
                     {/* Icon */}
                     <div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl sm:h-20 sm:w-20">
                       <Image
-                        src="/assets/project-section-icon/Reliable Force-frame.svg"
+                        src={ReliableForceIcon}
                         alt="Reliable Force icon"
                         width={80}
                         height={80}
@@ -194,7 +198,7 @@ export default function ProjectsSection() {
               <div className="relative flex items-center justify-end">
                 <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl">
                   <Image
-                    src="/assets/project-reliable-screen.png"
+                    src={ReliableForceImage}
                     alt="Reliable Force preview"
                     fill
                     className="object-fill"
