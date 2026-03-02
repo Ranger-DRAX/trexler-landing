@@ -3,28 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import InstagramIcon from "@/assets/social-icon/Instagram-logo.png";
+import XIcon from "@/assets/social-icon/X-logo.png";
+import FacebookIcon from "@/assets/social-icon/facebook-logo.png";
+import YoutubeIcon from "@/assets/social-icon/youtube-logo.png";
+import LinkedInIcon from "@/assets/social-icon/linekedin-logo.png";
+
 const SOCIAL_LINKS = [
-  {
-    href: "https://instagram.com",
-    label: "Instagram",
-    icon: "/assets/Instagram-logo.png",
-  },
-  { href: "https://twitter.com", label: "X", icon: "/assets/X-logo.png" },
-  {
-    href: "https://facebook.com",
-    label: "Facebook",
-    icon: "/assets/facebook-logo.png",
-  },
-  {
-    href: "https://youtube.com",
-    label: "YouTube",
-    icon: "/assets/youtube-logo.png",
-  },
-  {
-    href: "https://linkedin.com",
-    label: "LinkedIn",
-    icon: "/assets/linekedin-logo.png",
-  },
+  { href: "https://instagram.com", label: "Instagram", icon: InstagramIcon },
+  { href: "https://twitter.com", label: "X", icon: XIcon },
+  { href: "https://facebook.com", label: "Facebook", icon: FacebookIcon },
+  { href: "https://youtube.com", label: "YouTube", icon: YoutubeIcon },
+  { href: "https://linkedin.com", label: "LinkedIn", icon: LinkedInIcon },
 ];
 
 export default function Footer() {

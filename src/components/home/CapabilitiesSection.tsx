@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import DigitalTransformation from "@/assets/free-icon/Digital-Transformation.svg";
-import LargeSoftwareSystems from "@/assets/free-icon/Large-Software-Systems.svg";
-import FintechSolutions from "@/assets/free-icon/fintech-solutions.svg";
-import HealthcareSystems from "@/assets/free-icon/Healthcare-Systems.svg";
-import DataAnalytics from "@/assets/free-icon/Data-Analytics.svg";
-import NonProfit from "@/assets/free-icon/Non-profit.svg";
+import DigitalTransformationIcon from "@/assets/free-icon/Digital-Transformation.svg";
+import LargeSoftwareSystemsIcon from "@/assets/free-icon/Large-Software-Systems.svg";
+import FintechSolutionsIcon from "@/assets/free-icon/fintech-solutions.svg";
+import HealthcareSystemsIcon from "@/assets/free-icon/Healthcare-Systems.svg";
+import DataAnalyticsIcon from "@/assets/free-icon/Data-Analytics.svg";
+import NonProfitIcon from "@/assets/free-icon/Non-profit.svg";
 
 export default function CapabilitiesSection() {
   return (
@@ -35,7 +35,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={DigitalTransformation}
+              src={DigitalTransformationIcon}
               alt="Digital Transformation"
               width={56}
               height={56}
@@ -50,7 +50,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={LargeSoftwareSystems}
+              src={LargeSoftwareSystemsIcon}
               alt="Large Software Systems"
               width={56}
               height={56}
@@ -65,7 +65,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={FintechSolutions}
+              src={FintechSolutionsIcon}
               alt="FinTech Solutions"
               width={56}
               height={56}
@@ -118,7 +118,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={HealthcareSystems}
+              src={HealthcareSystemsIcon}
               alt="Healthcare Systems"
               width={56}
               height={56}
@@ -133,7 +133,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={DataAnalytics}
+              src={DataAnalyticsIcon}
               alt="Data Analytics & Reporting"
               width={56}
               height={56}
@@ -148,7 +148,7 @@ export default function CapabilitiesSection() {
             className="hover:border-accent active:border-accent focus:border-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-colors duration-200 ease-out focus:outline-none"
           >
             <Image
-              src={NonProfit}
+              src={NonProfitIcon}
               alt="Non-Profit Support"
               width={56}
               height={56}
