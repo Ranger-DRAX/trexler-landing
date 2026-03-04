@@ -29,7 +29,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-primary font-family-inter rounded-t-[70px] sm:rounded-t-[100px] px-6 md:px-12 py-16 md:py-24">
+    <section className="bg-primary font-family-inter rounded-t-[70px] px-6 py-16 sm:rounded-t-[100px] md:px-12 md:py-24">
       <div className="container mx-auto max-w-screen-2xl">
         <div className="mb-4">
           <span className="text-accent text-sm font-semibold tracking-wider uppercase">
@@ -64,7 +64,7 @@ export default function IndustriesSection() {
         </div>
 
         {/* DESKTOP/TABLET: Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((item) => (
             <IndustryCard key={item.title} {...item} />
           ))}
