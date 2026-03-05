@@ -72,9 +72,9 @@ const projects: Project[] = [
   {
     id: 2,
     shots: [
-      { src: "/assets/Reliable-Force-screen-shot-1.png" },
-      { src: "/assets/Reliable-Force-screen-shot-2.png" },
-      { src: "/assets/Reliable-Force-screen-shot-3.png" },
+      { src: slideContentImage1.src },
+      { src: slideContentImage2.src },
+      { src: slideContentImage3.src },
     ],
     describe: {
       number: "02",
