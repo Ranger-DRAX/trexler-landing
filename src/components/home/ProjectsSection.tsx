@@ -11,17 +11,17 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="font-family-inter bg-white px-2 py-20">
       <div className="container mx-auto max-w-screen-2xl">
-        <div className="mb-4">
+        <div className="mb-4 px-4 sm:px-0">
           <span className="text-accent text-sm font-semibold tracking-wider uppercase">
             04.Work
           </span>
         </div>
 
-        <h2 className="mb-6 text-4xl font-bold text-black sm:text-5xl md:text-6xl">
+        <h2 className="mb-6 px-4 text-4xl font-bold text-black sm:px-0 sm:text-5xl md:text-6xl">
           Projects & Solutions.
         </h2>
 
-        <p className="mb-16 max-w-3xl text-2xl text-gray-500">
+        <p className="mb-16 max-w-3xl px-4 text-2xl text-gray-500 sm:px-0">
           Comprehensive technology solutions tailored for modern enterprises.
         </p>
 

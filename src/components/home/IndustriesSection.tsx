@@ -29,7 +29,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-primary font-family-inter rounded-t-[70px] px-6 py-16 sm:rounded-t-[100px] md:px-12 md:py-24">
+    <section className="bg-primary font-family-inter rounded-t-[40px] px-6 py-12 sm:rounded-t-[100px] md:px-12 md:py-24">
       <div className="container mx-auto max-w-screen-2xl">
         <div className="mb-4">
           <span className="text-accent text-sm font-semibold tracking-wider uppercase">

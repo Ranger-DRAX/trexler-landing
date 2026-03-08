@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TrexlerLogoYellow from "@/assets/logo/Trexler-Logo-Yellow.svg";
 
 const mobileItems = [
   { label: "Home", href: "/" },
@@ -24,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/Trexler-Logo.png"
+              src={TrexlerLogoYellow}
               alt="Trexler Technology Systems"
               width={145}
               height={42}
