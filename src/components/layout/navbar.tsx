@@ -59,7 +59,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/assets/Trexler-Logo.png"
+                src={TrexlerLogoYellow}
                 alt="Trexler Technology Systems"
                 width={145}
                 height={40}
