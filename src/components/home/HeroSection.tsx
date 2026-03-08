@@ -22,7 +22,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="font-family-inter mb-6 text-6xl font-bold sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-8xl">
+        <h1 className="font-family-inter mb-6 text-[3.25rem] leading-none font-bold sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-8xl">
           <span className="block">
             <span className="text-primary">BUILDIN</span>
             <span className="text-gray-700">G</span>
@@ -43,7 +43,7 @@ export default function HeroSection() {
           {/* Subtitle */}
           <div className="flex w-full items-start gap-4 lg:w-auto lg:flex-1">
             {/* Accent line */}
-            <span className="bg-accent mt-1 h-24 w-1 rounded-full" />
+            <span className="bg-accent mt-1 h-20 w-1 rounded-full sm:h-24" />
             {/* Text */}
             <p className="max-w-xl text-left text-base leading-relaxed text-gray-600 sm:text-lg">
               We specialize in Digital Transformation, Large

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import TrexlerLogo from "@/assets/logo/Trexler-Logo.svg";
 import InstagramIcon from "@/assets/social-icon/Instagram-logo.png";
 import XIcon from "@/assets/social-icon/X-logo.png";
 import FacebookIcon from "@/assets/social-icon/facebook-logo.png";
@@ -28,7 +29,7 @@ export default function Footer() {
           <div className="flex flex-col items-center text-center lg:col-span-3 lg:items-start lg:text-left">
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/assets/Trexler-Logo-2.png"
+                src={TrexlerLogo}
                 alt="Trexler"
                 width={220}
                 height={60}
